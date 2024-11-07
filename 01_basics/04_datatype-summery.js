@@ -2,6 +2,9 @@
 
 // 7 types => string, number, boolean, null, undefined, symbol, bigint
 
+// all the peimitive datatype are stores in stack area
+// and it will gives the copies of value
+
 const score = 100
 const score1=100.2
 
@@ -26,6 +29,9 @@ console.log(typeof bigNumber);
 
 // non primitive(reference)
 // Array, object, Function
+
+// all non primitive data are stores in heap area 
+// it will gives the reference
 
 const heros=["ironman","thor","spiderman","batman"]
 const details={

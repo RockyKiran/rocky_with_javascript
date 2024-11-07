@@ -78,3 +78,4 @@ console.log(arr7.join());  //It is used to convert the array elements into strin
 
 // we have keys() , values(), and entries()
 // filter(),find(),flat(),map(),fill()
+

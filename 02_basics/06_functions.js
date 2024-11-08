@@ -114,15 +114,64 @@ console.log(demo2(10,20))
 //   hoisting is not possible in arrow function
 //   it is used to reduce a syntax(numbers of lines of code)
 //   it is a anonymous function 
+
+// syntax:-
+// *******
+//   (parameter)=>{}                               
+//              fat arrow
+
 //   it is a two types of returns:
 //                       i)implicit return Arrow function
 //                              return keyword is not mandatory
-//                              ()=>clg('hello')
-//                                 or                           // here braces is not mandatory
-//                              _=>clg('hello')
+                            //  ()=>clg('hello')
+                            //     or                           // here braces is not mandatory
+                            //  _=>clg('hello')
 //                       ii)explicit return Arrow function
 //                               return keyword is mandatory
-//                              let a= ()=>{
-//                                 return 'hello'                        // here braces is mandatory
-//                                    }
-//                                    clg(a())  
+                             let a= ()=>{
+                                return 'hello'                        // here braces is mandatory
+                                   }
+                                   console.log(a())  
+
+  // 5)nested function:-
+  // ********************
+  //     when we use a function inside the another function is called a nested function
+       function parent()
+       {
+        function child()
+        {
+        var a=20
+        function demo(){
+          var a =10
+          console.log(a)  // 10
+          console.log(this.a)   //20
+        }
+        demo()
+      }
+      child()
+    }  
+    parent();  
+    
+// IIFE(imideately invoking function expression)
+
+// syntax 
+    // ()()
+
+    (function () {
+      var a ='rocky';
+        function userName(){
+          console.log(`user name is = ${a}` );
+        }
+        userName()
+        var b = 'kiran';
+        function userName1 (){
+          console.log(`user name 2 is = ${b}`);
+
+        }
+        userName1()
+        var c= 'priya';
+        function userNAme2(){
+          console.log(`the username is = ${c}`);
+        }
+        userNAme2()
+    })();

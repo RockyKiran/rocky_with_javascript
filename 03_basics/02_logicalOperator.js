@@ -1,6 +1,8 @@
 let dbPassword = '123'
-let pass=prompt('enter password')
-let conPass=prompt('enter confirm password')
+let pass="rocky"
+let conPass="rockyu"
+
+console.log("rocky");
 
 // && operator
 // if we need to satisfy multiple condition , mandatory to perform logical and(&&) operator between the condition
@@ -28,4 +30,4 @@ if(pass==dbPassword || conPass==dbPassword)
         console.error('you have entered inncorrect password')
     }
 
-    // and we have one operator is not opeator
+

@@ -27,3 +27,5 @@ if(pass==dbPassword || conPass==dbPassword)
     {
         console.error('you have entered inncorrect password')
     }
+
+    // and we have one operator is not opeator

@@ -6,7 +6,7 @@
 
  # Solution Code
 
- ## Project 1
+ ## Project 1 solution
 
  ```javascript
 console.log(" rocky1....);
@@ -34,10 +34,8 @@ btn.forEach((btn)=>{
       bdy.style.backgroundColor=e.target.id
     }
     
-
   })
 })
-
 
 
  ```

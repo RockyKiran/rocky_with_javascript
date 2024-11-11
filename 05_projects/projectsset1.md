@@ -9,7 +9,7 @@
  ## Project 1 solution
 
  ```javascript
-console.log(" rocky1....);
+console.log(" rocky1....");
 
 let btn=document.querySelectorAll(".button")
 console.log(btn)

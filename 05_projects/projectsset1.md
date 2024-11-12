@@ -43,7 +43,7 @@ btn.forEach((btn)=>{
  ## Project 2 solution
 
  ```javascript
- console.log("rocky2...)
+ console.log("rocky2...")
 
  let form=document.querySelector('form')
 // console.log(form)
@@ -78,4 +78,22 @@ form.addEventListener('submit',(e)=>{
   }
 })
 
+ ```
+ 
+ ## Project 3 Solution
+
+ ```javascript
+ console.log("rocky3...");
+
+ let clock = document.getElementById("clock")
+console.log(clock)
+
+setInterval(()=>{
+  let date=new Date()
+  // console.log(date)
+  let date1=date.toLocaleTimeString()
+  console.log(date1)
+  clock.innerHTML=date1
+},1000)
+ 
  ```

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <button id="btn1">Press1</button>
+    <button id =btn></button>
+    <button id="btn2">Press2</button>
+    <button id="btn3">Press3</button>
+    <button id="btn4">Press4</button>
+   <input type="text" id="inp1">
+   <input type="text" id="inp2">
+    <video src="">ddd</video>
+
+    <script>
+    //    let btn1= document.getElementById("btn1")
+    //    btn1.onclick= ()=>{
+    //   console.log("hello dude....")
+    // }
+
+    // let favcol=prompt("enter your fav colour1")
+    // let btn= document.getElementById("btn")
+    // btn.innerHTML = `${favcol}`
+
+    // btn.onmouseover=()=>{
+    //     document.body.style.backgroundColor=favcol
+    //     document.body.style.transition="ease all 5s"
+    // }
+    // let favcol1=prompt("enter your fav colour2")
+    // btn.onmouseout=()=>{
+    //     document.body.style.backgroundColor=favcol1
+    //     document.body.style.transition="ease all 5s"
+    // }
+    // let btn2= document.getElementById("btn2")
+    // btn2.onclick=()=>{
+    //     let res=Math.round(Math.random()*100000)
+    //     console.log(res);
+    //     document.body.style.backgroundColor=`#${res}`
+        
+    // }
+    let inp1= document.getElementById("inp1")
+    // inp1.onkeyup=()=>{                                   // to perform the event whn the user release the button
+    //     let res=Math.round(Math.random()*100000)
+    //     console.log(res);
+    //      document.body.style.backgroundColor=`#${res}`
+    // }
+    inp1.onkeydown=()=>{                                     // onkeydown event occurs when a user process a key on the keyboard
+        let res=Math.round(Math.random()*100000)
+        console.log(res);
+         document.body.style.backgroundColor=`#${res}`
+    }
+
+
+    </script>
+    
+</body>
+</html>

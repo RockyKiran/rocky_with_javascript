@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Hey .... Rocky... How Are You</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+
+    <script>
+                // setInterval
+          
+          // The setInterval() method calls a function at specified intervals (in milliseconds).
+          // The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.
+          // 1 second = 1000 milliseconds.     
+             
+        let stop1=function(){
+            let s=setInterval(()=>{
+            console.log("set Interval Activate",Date.now());    
+        },2000)
+        }
+         
+
+        // let stop=setInterval(()=>{console.log("rocky");
+    // },2000)
+    // clearInterval(stop)
+    document.getElementById("stop").addEventListener('click',()=>{
+        clearInterval()
+        document.getElementById("h1").innerHTML="I am Not Fine Broth..."
+
+    })
+    document.getElementById("start").addEventListener('click',()=>{
+       document.getElementById("h1").innerHTML="Hey .... Rocky... How Are You.. U back"
+      stop1()
+    })
+    </script>
+</body>
+</html>

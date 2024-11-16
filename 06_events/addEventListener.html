@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="text" cols="60" rows="20"></textarea>
+    <button id="btn">click here to copy</button>
+    <h4 id="h4"></h4>
+
+    <script>
+        // addeventlistener is also work like a event handlers but it is some kind of good manner to write our codes
+        //within addeventlistener we will pass 3 argument 
+         //           1) the first argument is event name(which event u want to call) like:onclick,onmouseover,onmouseout,click etc....
+         //           2) the second argument is a one call back function (within this we will write our programe)
+        //            3) the third argument is optional , we will pass boolean value(default value always false)
+
+        
+                      // COPYING //
+
+       let btn= document.getElementById("btn")
+       btn.addEventListener('click',()=>{
+        let text=document.getElementById("text").value
+        window.navigator.clipboard.writeText(text)
+
+        .then(()=>{
+         let h4=document.getElementById("h4")
+         h4.innerHTML="it is copied"
+        }) 
+        .catch(()=>{
+            let h4=document.getElementById("h4")
+         h4.innerHTML="it is not copied"
+            
+        }) 
+       })
+
+
+    
+    </script>
+</body>
+</html>

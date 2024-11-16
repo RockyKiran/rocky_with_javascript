@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #div1{
+      border: 2px solid black;
+      height: 400px;
+      width: 400px;
+      text-align: center;
+    }
+    #div2{
+      border: 2px solid black;
+      height: 200px;
+      width: 200px;
+      margin-top: 50px;
+      margin-left:  80px;
+      text-align: center;
+
+    }
+    #div3{
+      border: 2px solid black;
+      height: 80px;
+      width: 80px;
+      margin-top: 50px;
+      margin-left: 50px;
+      text-align: center;
+
+    }
+
+    #div1_1{
+      border: 2px solid black;
+      height: 400px;
+      width: 400px;
+      text-align: center;
+    }
+    #div2_1{
+      border: 2px solid black;
+      height: 200px;
+      width: 200px;
+      margin-top: 50px;
+      margin-left:  80px;
+      text-align: center;
+
+    }
+    #div3_1{
+      border: 2px solid black;
+      height: 80px;
+      width: 80px;
+      margin-top: 50px;
+      margin-left: 50px;
+      text-align: center;
+
+    }
+
+    #div1_2{
+      border: 2px solid black;
+      height: 400px;
+      width: 400px;
+      text-align: center;
+    }
+    #div2_2{
+      border: 2px solid black;
+      height: 200px;
+      width: 200px;
+      margin-top: 50px;
+      margin-left:  80px;
+      text-align: center;
+
+    }
+    #div3_2{
+      border: 2px solid black;
+      height: 80px;
+      width: 80px;
+      margin-top: 50px;
+      margin-left: 50px;
+      text-align: center;
+
+    }
+    </style>
+</head>
+<body>
+    //                        bubbling - bottom to top approach
+
+    <div id="div1"> GRAND-PARENT
+        <div id="div2"> PARENT
+            <div id="div3">CHILD</div>
+        </div>
+    </div> <br><br><br>
+
+
+    
+//                      capturing - top to bottom 
+
+    <div id="div1_1"> GRAND-PARENT 1
+        <div id="div2_1"> PARENT 1
+            <div id="div3_1">CHILD 1</div>
+        </div>
+    </div><br><br><br>
+
+
+// to stop this event propagation
+
+    <div id="div1_2"> GRAND-PARENT 1
+        <div id="div2_2"> PARENT 1
+            <div id="div3_2">CHILD 1</div>
+        </div>
+    </div>
+
+
+    <script>
+                   //  BUBBLING  //
+
+        // if we pass the 3rd argument is false,it is called bubbling 
+        // bubbling means it starts from bottom of the DOM tree and reaches untill to top of the DOM tree
+        // it is bottom to top approach
+    let gp=document.getElementById("div1")
+     gp.addEventListener("click",(e)=>{
+      console.log("i am grand parent")                //if we will trigger the grand-parent event thn we will get grand parent
+      e.target
+      
+    },false)
+
+
+    let parent=document.getElementById("div2")
+    // console.log(P)
+    parent.addEventListener("click",(f)=>{
+      console.log("i am parent")                    //if we will trigger the parent event thn we will get parent and grand parent
+
+    },false)
+
+    let child=document.getElementById("div3")
+    // console.log(child)
+    child.addEventListener("click",(g)=>{
+      console.log("i am child")                        // if we will trigger the child event thn we will get child, parent and grand parent
+     
+    },false)
+
+            
+                    //    CAPTURING   //
+
+        // if we pass the 3rd argument is true,it is called capturing
+        // capturing means it starts from top of the DOM tree and reaches untill to target
+        //it is top to bottom approach
+
+    let gp1=document.getElementById("div1_1")
+     gp1.addEventListener("click",(e)=>{
+      console.log("i am grand parent")                
+      
+    },true)
+
+
+    let parent1=document.getElementById("div2_1")
+    // console.log(P)
+    parent1.addEventListener("click",(f)=>{
+      console.log("i am parent")                    
+    },true)
+
+    let child1=document.getElementById("div3_1")
+    // console.log(child)
+    child1.addEventListener("click",(g)=>{
+      console.log("i am child")   
+
+     
+    },true)
+
+
+               // To stop this event propagation
+       // stopPropagation is used for to stop the propagation
+       //`stopPropagation` is a method used to prevent the further propagation of an event through the DOM (Document Object Model) hierarchy.
+
+
+    let gp2=document.getElementById("div1_2")
+     gp2.addEventListener("click",(e)=>{
+      console.log("i am grand parent") 
+      e.stopPropagation()               
+      
+    },false)
+
+
+    let parent2=document.getElementById("div2_2")
+    // console.log(P)
+    parent2.addEventListener("click",(f)=>{
+      console.log("i am parent")
+      f.stopPropagation()                      
+
+    },false)
+
+    let child2=document.getElementById("div3_2")
+    // console.log(child)
+    child2.addEventListener("click",(g)=>{
+      console.log("i am child")  
+      g.stopPropagation()
+
+    },false)
+
+
+
+    </script>
+</body>
+</html>

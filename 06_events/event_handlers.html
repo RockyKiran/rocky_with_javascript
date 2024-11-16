@@ -13,11 +13,11 @@
     <button id="btn4">Press4</button>
    <input type="text" id="inp1">
    <input type="text" id="inp2">
-    <video src="">ddd</video>
+   <h1 id="heading"></h1>
 
     <script>
     //    let btn1= document.getElementById("btn1")
-    //    btn1.onclick= ()=>{
+    //    btn1.onclick= ()=>{                             // event occurs when the user click on the html element
     //   console.log("hello dude....")
     // }
 
@@ -25,33 +25,91 @@
     // let btn= document.getElementById("btn")
     // btn.innerHTML = `${favcol}`
 
-    // btn.onmouseover=()=>{
+    // btn.onmouseover=()=>{                            // when the mouse pointer over's on the html element we have to pass an event use onmouseover
     //     document.body.style.backgroundColor=favcol
     //     document.body.style.transition="ease all 5s"
     // }
     // let favcol1=prompt("enter your fav colour2")
-    // btn.onmouseout=()=>{
+    // btn.onmouseout=()=>{                              // onmouseout is opposite to onmouseover, it occurs event when the mouse leave the html element
     //     document.body.style.backgroundColor=favcol1
     //     document.body.style.transition="ease all 5s"
     // }
-    // let btn2= document.getElementById("btn2")
-    // btn2.onclick=()=>{
-    //     let res=Math.round(Math.random()*100000)
-    //     console.log(res);
-    //     document.body.style.backgroundColor=`#${res}`
+    let btn2= document.getElementById("btn2")
+    btn2.onclick=()=>{                                    
+        let res=Math.round(Math.random()*100000)
+        console.log(res);
+        document.body.style.backgroundColor=`#${res}`
         
-    // }
+    }
     let inp1= document.getElementById("inp1")
-    // inp1.onkeyup=()=>{                                   // to perform the event whn the user release the button
-    //     let res=Math.round(Math.random()*100000)
-    //     console.log(res);
-    //      document.body.style.backgroundColor=`#${res}`
-    // }
+    inp1.onkeyup=()=>{                                   // to perform the event whn the user release the button
+        let res=Math.round(Math.random()*100000)
+        console.log(res);
+         document.body.style.backgroundColor=`#${res}`
+    }
     inp1.onkeydown=()=>{                                     // onkeydown event occurs when a user process a key on the keyboard
         let res=Math.round(Math.random()*100000)
         console.log(res);
          document.body.style.backgroundColor=`#${res}`
     }
+
+    let btn3=document.getElementById("btn3")
+    btn3.onmousedown=()=>{                                 //to call the event when the mouse button is down
+    let h1=document.createElement("h1")
+    h1.innerHTML="hey onmouseDown u triggerd..."
+    document.body.appendChild(h1)
+    }
+    let btn4=document.getElementById("btn4")
+    btn4.onmouseup=()=>{                                 // to call the event when the mouse button is released
+    let h1=document.createElement("h1")
+    h1.innerHTML="hey onmouseup u triggerd..."
+    document.body.appendChild(h1)
+    }
+
+
+   
+
+let inp2=document.getElementById("inp2")
+
+inp2.oninput=()=>{                                          // to call the event when the users gives the input in the input box
+    let inpValue=document.getElementById("inp2").value
+    if(inpValue.length>0 && inpValue.length<5)
+{
+    document.getElementById("heading").innerHTML="this is a weak password"
+    document.getElementById("inp2").style.border="3px solid aqua"
+    document.getElementById("inp2").style.outline="none"
+    document.getElementById("inp2").style.borderRadius="5px"
+}
+else if(inpValue.length>4 && inpValue.length<10)
+{
+    document.getElementById("heading").innerHTML="this is good password"
+    document.getElementById("inp2").style.border="3px solid blue"
+    document.getElementById("inp2").style.outline="none"
+    document.getElementById("inp2").style.borderRadius="5px"
+}
+else if(inpValue.length>9 && inpValue.length<13)
+{
+    document.getElementById("heading").innerHTML="this is strong password  "
+    document.getElementById("inp2").style.border="3px solid yellow"
+    document.getElementById("inp2").style.outline="none"
+    document.getElementById("inp2").style.borderRadius="5px"
+}
+else if(inpValue.length>12 && inpValue.length<16)
+{
+    document.getElementById("heading").innerHTML="this is a excellent password"
+    document.getElementById("inp2").style.border="3px solid green"
+    document.getElementById("inp2").style.outline="none"
+    document.getElementById("inp2").style.borderRadius="5px"
+}
+else
+    
+{
+    document.getElementById("heading").innerHTML=""
+    document.getElementById("inp2").style.border="3px solid black"
+}
+
+}
+
 
 
     </script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Hey..Rocky...Here</h1>
+    <button id="stop">STOP</button>
+
+    <script>
+        //       setTimeOut()    // 
+    
+    // The setTimeout() method calls a function after a number of milliseconds.
+    // 1 second = 1000 milliseconds.
+    // The setTimeout() is executed only once.
+
+
+// let sTO=()=>{
+//             console.log("Set Time Out Activate");
+//         }
+//         setTimeout(()=>{sTO()},5000)
+
+        setTimeout(()=>{
+            console.log("Set Time Out Activate");
+            
+        },5000)
+
+        let changeText= ()=>{
+            document.getElementById("h1").innerHTML="Rocky....Gone"
+        }
+
+                  // clearTimeOut//
+           
+       // The clearTimeout() method clears a timer set with the setTimeout() method.           
+      // Use the clearTimeout() method to prevent the function from starting. 
+      // use the reference returned from setTimeout():           
+
+        let stopMe=setTimeout(changeText,4000)
+
+        // clearTimeout(stopMe)        
+
+        document.getElementById("stop").addEventListener('click',()=>{
+            clearTimeout(stopMe)
+            console.log("it stopped...");
+            
+        })
+
+
+    </script>
+</body>
+</html>
